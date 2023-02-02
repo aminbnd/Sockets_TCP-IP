@@ -39,7 +39,6 @@ async void receiveMessage()
     {
         Console.WriteLine(ex.ToString());
     }
-
 }
 
 async void sendMessage()
