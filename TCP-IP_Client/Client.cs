@@ -46,7 +46,10 @@ async void receiveMessage()
         var response = Encoding.UTF8.GetString(buffer, 0, received);
         Console.WriteLine($"Server: {response}");
     }
-    catch (Exception ex) { Console.WriteLine(ex.ToString()); }
+    catch (Exception ex)
+    {
+        Console.WriteLine(ex.ToString());
+    }
 
 
 }
