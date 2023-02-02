@@ -38,6 +38,8 @@ async void sendMessage()
 async void receiveMessage()
 {
     var buffer = new byte[1024];
+
+
     try
     {
         var received = await client.ReceiveAsync(buffer, SocketFlags.None);
@@ -45,4 +47,6 @@ async void receiveMessage()
         Console.WriteLine($"Server: {response}");
     }
     catch (Exception ex) { Console.WriteLine(ex.ToString()); }
+
+
 }
