@@ -13,11 +13,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Amine\\Desktop\\Sockets_TCP-IP_C#\\TCP-IP_Client-Server\\TCP-IP_Client.csproj",
+      "projectUniqueName": "C:\\Users\\Amine\\Desktop\\Sockets_TCP-IP_C#\\TCP-IP_Client\\TCP-IP_Client.csproj",
       "projectName": "TCP-IP_Client",
-      "projectPath": "C:\\Users\\Amine\\Desktop\\Sockets_TCP-IP_C#\\TCP-IP_Client-Server\\TCP-IP_Client.csproj",
+      "projectPath": "C:\\Users\\Amine\\Desktop\\Sockets_TCP-IP_C#\\TCP-IP_Client\\TCP-IP_Client.csproj",
       "packagesPath": "C:\\Users\\Amine\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Amine\\Desktop\\Sockets_TCP-IP_C#\\TCP-IP_Client-Server\\obj\\",
+      "outputPath": "C:\\Users\\Amine\\Desktop\\Sockets_TCP-IP_C#\\TCP-IP_Client\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\Amine\\AppData\\Roaming\\NuGet\\NuGet.Config",

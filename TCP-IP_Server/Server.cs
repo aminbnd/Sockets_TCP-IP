@@ -11,13 +11,22 @@ IPEndPoint ipEndPoint = new(ipAdress, 11_000);
 using Socket listener = new(ipEndPoint.AddressFamily, SocketType.Stream, ProtocolType.Tcp);
 listener.Bind(ipEndPoint);
 listener.Listen(1000);
-
+Console.WriteLine("Waiting connection ...");
 var handeler = await listener.AcceptAsync();
-while (true)
+if (handeler != null) Console.WriteLine("Succefully connected"); else Console.WriteLine("Connection failed");
+try
 {
-    receiveMessage();
-    sendMessage();
+    while (true)
+    {
+        receiveMessage();
+        sendMessage();
+    }
 }
+catch (Exception ex)
+{
+    Console.WriteLine(ex);
+}
+
 
 async void receiveMessage()
 {
@@ -44,5 +53,8 @@ async void sendMessage()
         _ = await handeler.SendAsync(messageBytes, SocketFlags.None);
         Console.WriteLine($"Server: {message}");
     }
-    catch (Exception ex) { Console.WriteLine(ex.ToString()); }
+    catch (Exception ex)
+    {
+        Console.WriteLine(ex.ToString());
+    }
 }
