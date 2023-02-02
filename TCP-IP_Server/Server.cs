@@ -25,10 +25,10 @@ while (true)
 
 
 
-
 async void receiveMessage()
 {
     var buffer = new byte[1024];
+
     try
     {
         var received = await handeler.ReceiveAsync(buffer, SocketFlags.None);
@@ -39,6 +39,7 @@ async void receiveMessage()
     {
         Console.WriteLine(ex.ToString());
     }
+
 }
 
 async void sendMessage()
