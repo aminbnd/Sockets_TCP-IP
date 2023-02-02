@@ -9,11 +9,20 @@ IPEndPoint ipEndPoint = new(ipAdress, 11_000);
 
 using Socket client = new(ipEndPoint.AddressFamily, SocketType.Stream, ProtocolType.Tcp);
 await client.ConnectAsync(ipEndPoint);
-while (true)
+
+try
 {
-    sendMessage();
-    receiveMessage();
+    while (true)
+    {
+        sendMessage();
+        receiveMessage();
+    }
 }
+catch (Exception ex)
+{
+    Console.WriteLine(ex);
+}
+
 
 async void sendMessage()
 {
