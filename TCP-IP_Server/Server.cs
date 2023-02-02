@@ -15,18 +15,15 @@ Console.WriteLine("Waiting connection ...");
 var handeler = await listener.AcceptAsync();
 if (handeler != null) Console.WriteLine("Succefully connected"); else Console.WriteLine("Connection failed");
 
-try
+
+while (true)
 {
-    while (true)
-    {
-        receiveMessage();
-        sendMessage();
-    }
+    receiveMessage();
+    sendMessage();
 }
-catch (Exception ex)
-{
-    Console.WriteLine(ex);
-}
+
+
+
 
 
 async void receiveMessage()
