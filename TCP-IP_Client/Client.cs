@@ -51,6 +51,4 @@ async void receiveMessage()
     {
         Console.WriteLine(ex.ToString());
     }
-
-
 }
