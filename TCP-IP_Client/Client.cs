@@ -23,6 +23,7 @@ while (true)
 async void sendMessage()
 {
     var message = Console.ReadLine();
+
     try
     {
         var messageBytes = Encoding.UTF8.GetBytes(message);
